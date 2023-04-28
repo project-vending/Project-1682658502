@@ -1,0 +1,14 @@
+python
+from PIL import Image
+
+# Set image size as desired
+img_width = 800
+img_height = 600
+
+# Create image object
+img = Image.new('RGB', (img_width, img_height))
+
+# Save image file with desired filename and path
+filename = "visualization_2.png"
+filepath = os.path.join("Real-time Data Visualization Dashboard", "visualization", filename)
+img.save(filepath)
