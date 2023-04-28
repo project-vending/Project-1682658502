@@ -1,0 +1,20 @@
+
+import streamlit as st
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Read in the data from your data file(s)
+data_path = "path/to/data_file.csv"
+data = pd.read_csv(data_path)
+
+# Define your visualization (in this example, a simple scatter plot)
+fig, ax = plt.subplots()
+ax.scatter(data["X"], data["Y"])
+ax.set_title("My Scatter Plot")
+
+# Save the visualization to the specified path
+output_path = "Real-time Data Visualization Dashboard/visualization/visualization_1.png"
+plt.savefig(output_path)
+
+# Display the visualization in Streamlit
+st.image(output_path)
