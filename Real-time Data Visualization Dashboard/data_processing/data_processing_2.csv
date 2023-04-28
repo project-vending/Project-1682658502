@@ -1,0 +1,18 @@
+python
+import os
+
+# Define the path to the data_processing_2.csv file
+data_file_path = os.path.join("Real-time Data Visualization Dashboard", "data_processing", "data_processing_2.csv")
+
+# Open the file in write mode and write some data to it
+with open(data_file_path, "w") as f:
+    f.write("Timestamp,Value\n")
+    f.write("2022-03-02 12:00:00,10\n")
+    f.write("2022-03-02 12:01:00,15\n")
+    f.write("2022-03-02 12:02:00,13\n")
+    f.write("2022-03-02 12:03:00,18\n")
+    f.write("2022-03-02 12:04:00,11\n")
+
+# Confirm that the data was written successfully by reading the file and printing its contents
+with open(data_file_path, "r") as f:
+    print(f.read())
